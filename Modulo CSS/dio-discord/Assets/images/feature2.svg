@@ -1,0 +1,59 @@
+<svg width="500" height="300" viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="500" height="300" fill="#f6f6f6" rx="16"/>
+  
+  <!-- Voice Channel Interface -->
+  <rect x="50" y="50" width="400" height="200" fill="#36393f" rx="12"/>
+  
+  <!-- Channel List -->
+  <rect x="70" y="70" width="150" height="160" fill="#2f3136" rx="8"/>
+  
+  <!-- Voice Channels -->
+  <rect x="85" y="90" width="120" height="20" fill="#40444b" rx="4"/>
+  <circle cx="95" cy="100" r="4" fill="#57f287"/>
+  <rect x="105" y="97" width="60" height="6" fill="#dcddde" rx="2"/>
+  
+  <rect x="85" y="120" width="120" height="20" fill="#5865f2" rx="4"/>
+  <circle cx="95" cy="130" r="4" fill="#57f287"/>
+  <rect x="105" y="127" width="80" height="6" fill="#ffffff" rx="2"/>
+  
+  <!-- Users in Voice -->
+  <rect x="95" y="145" width="100" height="15" fill="#40444b" rx="2"/>
+  <circle cx="105" cy="152" r="6" fill="#5865f2"/>
+  <rect x="115" y="149" width="40" height="4" fill="#dcddde" rx="1"/>
+  <circle cx="190" cy="152" r="3" fill="#57f287"/>
+  
+  <rect x="95" y="165" width="100" height="15" fill="#40444b" rx="2"/>
+  <circle cx="105" cy="172" r="6" fill="#fee75c"/>
+  <rect x="115" y="169" width="50" height="4" fill="#dcddde" rx="1"/>
+  <circle cx="190" cy="172" r="3" fill="#57f287"/>
+  
+  <!-- Main Voice Area -->
+  <rect x="240" y="70" width="190" height="160" fill="#40444b" rx="8"/>
+  
+  <!-- Speaking Indicator -->
+  <circle cx="320" cy="120" r="30" fill="#57f287" opacity="0.2"/>
+  <circle cx="320" cy="120" r="25" fill="#57f287" opacity="0.4"/>
+  <circle cx="320" cy="120" r="20" fill="#5865f2"/>
+  
+  <!-- Voice Controls -->
+  <rect x="270" y="180" width="100" height="30" fill="#2f3136" rx="15"/>
+  <circle cx="290" cy="195" r="8" fill="#ed4245"/>
+  <circle cx="320" cy="195" r="8" fill="#72767d"/>
+  <circle cx="350" cy="195" r="8" fill="#57f287"/>
+  
+  <!-- Connection Quality Indicator -->
+  <rect x="400" y="80" width="20" height="4" fill="#57f287" rx="2"/>
+  <rect x="400" y="90" width="20" height="6" fill="#57f287" rx="2"/>
+  <rect x="400" y="102" width="20" height="8" fill="#57f287" rx="2"/>
+  <rect x="400" y="116" width="20" height="10" fill="#57f287" rx="2"/>
+  
+  <!-- Decorative Sound Waves -->
+  <path d="M 30 150 Q 40 140 50 150 Q 60 160 70 150" stroke="#5865f2" stroke-width="2" fill="none" opacity="0.3"/>
+  <path d="M 450 120 Q 460 110 470 120 Q 480 130 490 120" stroke="#57f287" stroke-width="2" fill="none" opacity="0.3"/>
+  
+  <!-- Status Indicators -->
+  <circle cx="30" cy="100" r="3" fill="#57f287"/>
+  <circle cx="30" cy="120" r="3" fill="#faa61a"/>
+  <circle cx="30" cy="140" r="3" fill="#ed4245"/>
+</svg>
