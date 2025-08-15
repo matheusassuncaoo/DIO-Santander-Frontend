@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone - DIO Challenge</title>
+    <meta name="description" content="Clone da página do YouTube desenvolvido com CSS Flexbox">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <button class="menu-btn" id="menuBtn" aria-label="Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </button>
+            <div class="logo">
+                <svg width="90" height="20" viewBox="0 0 90 20">
+                    <path d="M27.9727 3.12324C27.6435 1.89323 26.6768 0.926623 25.4468 0.597366C23.2197 2.24288e-07 14.285 0 14.285 0C14.285 0 5.35042 2.24288e-07 3.12323 0.597366C1.89323 0.926623 0.926623 1.89323 0.597366 3.12324C2.24288e-07 5.35042 0 10 0 10C0 10 2.24288e-07 14.6496 0.597366 16.8768C0.926623 18.1068 1.89323 19.0734 3.12323 19.4026C5.35042 20 14.285 20 14.285 20C14.285 20 23.2197 20 25.4468 19.4026C26.6768 19.0734 27.6435 18.1068 27.9727 16.8768C28.5701 14.6496 28.5701 10 28.5701 10C28.5701 10 28.5701 5.35042 27.9727 3.12324Z" fill="#FF0000"/>
+                    <path d="M11.4253 14.2854L18.8477 10.0004L11.4253 5.71533V14.2854Z" fill="white"/>
+                </svg>
+                <span class="logo-text">YouTube</span>
+            </div>
+        </div>
+        
+        <div class="header-center">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button class="search-btn" aria-label="Pesquisar">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M20.87 20.17l-5.59-5.59C16.35 13.35 17 11.75 17 10c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.75 0 3.35-.65 4.58-1.71l5.59 5.59.7-.71zM10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+                    </svg>
+                </button>
+            </div>
+            <button class="mic-btn" aria-label="Pesquisar por voz">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="header-right">
+            <button class="icon-btn" aria-label="Criar">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z"/>
+                </svg>
+            </button>
+            <button class="icon-btn" aria-label="Notificações">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+                </svg>
+            </button>
+            <button class="avatar-btn" aria-label="Conta">
+                <div class="avatar">
+                    <span>MC</span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <a href="#" class="nav-item active">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                        </svg>
+                        <span>Início</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/>
+                        </svg>
+                        <span>Shorts</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M10 8l6 4-6 4V8zM21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14z"/>
+                        </svg>
+                        <span>Inscrições</span>
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <a href="#" class="nav-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M11 7l6 3.5L11 14V7zm1 13c4.41 0 8-3.59 8-8s-3.59-8-8-8-8 3.59-8 8 3.59 8 8 8zm0-14c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6 2.69-6 6-6z"/>
+                        </svg>
+                        <span>Biblioteca</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span>Histórico</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="video-grid">
+                <!-- Video Cards -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="thumbnail-placeholder" style="background: linear-gradient(45deg, #FF6B6B, #4ECDC4);"></div>
+                        <span class="video-duration">10:23</span>
+                    </div>
+                    <div class="video-info">
+                        <div class="channel-avatar">
+                            <span>TC</span>
+                        </div>
+                        <div class="video-details">
+                            <h3 class="video-title">Como criar um clone do YouTube com CSS Flexbox</h3>
+                            <p class="channel-name">Tech Channel</p>
+                            <p class="video-stats">1,2 mi de visualizações • há 2 dias</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="thumbnail-placeholder" style="background: linear-gradient(45deg, #A8E6CF, #FFD93D);"></div>
+                        <span class="video-duration">15:47</span>
+                    </div>
+                    <div class="video-info">
+                        <div class="channel-avatar">
+                            <span>DC</span>
+                        </div>
+                        <div class="video-details">
+                            <h3 class="video-title">Desafio DIO: Construindo seu portfólio de desenvolvedor</h3>
+                            <p class="channel-name">DIO Channel</p>
+                            <p class="video-stats">850 mil visualizações • há 1 semana</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="thumbnail-placeholder" style="background: linear-gradient(45deg, #FF8A80, #82B1FF);"></div>
+                        <span class="video-duration">8:15</span>
+                    </div>
+                    <div class="video-info">
+                        <div class="channel-avatar">
+                            <span>WD</span>
+                        </div>
+                        <div class="video-details">
+                            <h3 class="video-title">CSS Grid vs Flexbox: Quando usar cada um?</h3>
+                            <p class="channel-name">Web Dev Pro</p>
+                            <p class="video-stats">2,3 mi de visualizações • há 3 dias</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="thumbnail-placeholder" style="background: linear-gradient(45deg, #B39DDB, #F8BBD9);"></div>
+                        <span class="video-duration">12:30</span>
+                    </div>
+                    <div class="video-info">
+                        <div class="channel-avatar">
+                            <span>JS</span>
+                        </div>
+                        <div class="video-details">
+                            <h3 class="video-title">JavaScript ES6+: Recursos que todo dev precisa conhecer</h3>
+                            <p class="channel-name">JS Master</p>
+                            <p class="video-stats">1,8 mi de visualizações • há 5 dias</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="thumbnail-placeholder" style="background: linear-gradient(45deg, #81C784, #FFB74D);"></div>
+                        <span class="video-duration">20:45</span>
+                    </div>
+                    <div class="video-info">
+                        <div class="channel-avatar">
+                            <span>RC</span>
+                        </div>
+                        <div class="video-details">
+                            <h3 class="video-title">React Hooks: Guia completo para iniciantes</h3>
+                            <p class="channel-name">React Code</p>
+                            <p class="video-stats">3,1 mi de visualizações • há 1 semana</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="thumbnail-placeholder" style="background: linear-gradient(45deg, #E57373, #64B5F6);"></div>
+                        <span class="video-duration">14:22</span>
+                    </div>
+                    <div class="video-info">
+                        <div class="channel-avatar">
+                            <span>PY</span>
+                        </div>
+                        <div class="video-details">
+                            <h3 class="video-title">Python para Data Science: Primeiros passos</h3>
+                            <p class="channel-name">Python Hub</p>
+                            <p class="video-stats">920 mil visualizações • há 4 dias</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="thumbnail-placeholder" style="background: linear-gradient(45deg, #AED581, #FFD54F);"></div>
+                        <span class="video-duration">18:10</span>
+                    </div>
+                    <div class="video-info">
+                        <div class="channel-avatar">
+                            <span>ND</span>
+                        </div>
+                        <div class="video-details">
+                            <h3 class="video-title">Node.js e Express: Criando APIs RESTful</h3>
+                            <p class="channel-name">Node Dev</p>
+                            <p class="video-stats">1,5 mi de visualizações • há 6 dias</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="thumbnail-placeholder" style="background: linear-gradient(45deg, #F06292, #BA68C8);"></div>
+                        <span class="video-duration">11:55</span>
+                    </div>
+                    <div class="video-info">
+                        <div class="channel-avatar">
+                            <span>UI</span>
+                        </div>
+                        <div class="video-details">
+                            <h3 class="video-title">UI/UX Design: Princípios fundamentais</h3>
+                            <p class="channel-name">UI Expert</p>
+                            <p class="video-stats">2,7 mi de visualizações • há 2 semanas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
